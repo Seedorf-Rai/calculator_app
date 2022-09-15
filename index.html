@@ -11,24 +11,106 @@
         }
         .calculator{
           width: 30%;
-          height: 85vh;
+          height: 700px;
           border-radius: 10px;
-          background-color: #2B2C37;
+          background-color: #1c1d25;
           position: fixed;
           left: 33%;
           top: 7%;
+          overflow: hidden;
+          margin-bottom: 10px;
         }
         body{
           background-color: #23252C;
+        }
+        .result{
+          /* background-color: red; */
+          width: 100%;
+          height: 100px;
+          margin-top: 10%;
+          padding-bottom: 20px;
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 40px;
+          color: white;
+          font-size: 30px;
+          font-weight: 700;
+          align-items: flex-end;
+        }
+        .numbers-div{
+          width: 96%;
+          height: calc(700px - 200px);
+          background-color: #292A33;
+          border-top-left-radius: 10px ;
+          border-top-right-radius: 10px ;
+          padding-top: 40px;
+          padding-left: 20px;
+
+        }
+        button{
+          height: 60px;
+          width: 60px;
+          border-radius: 8px;
+          margin-left: 30px;
+          margin-bottom: 15px;
+          font-size: 20px;
+          font-weight: 500;
+          transition: 0.1s;
+          background-color: #1d1e25ec;
+          border: none;
+          color: white;
+        }
+        button:hover{
+          cursor: pointer;
+          width:58px;
+          height: 58px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .ac{
+          color: #318B7F;
+          font-weight: 600;
+        }
+        .oran{
+          color: #b27346;
+          font-weight: 600;
         }
     </style>
 </head>
 <body>
   <div class="calculator">
-    <div></div>
-    <div></div>
-    <div></div>
+   <div class="result">
+    <div id="result">
+
+    </div>
+   </div>
+   <div class="numbers-div">
+      <button onclick=""myAc()"  class="ac">AC</button>
+      <button class="ac">+/-</button>
+      <button class="ac">%</button>
+      <button class="oran">/</button>
+      <button onclick="myFunction()">7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="oran">x</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="oran">-</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="oran">+</button>
+      <button>&</button>
+      <button>0</button>
+      <button>.</button>
+      <button class="oran">=</button>
+   </div>
   </div>
  <script src="index.js"></script>
+ <script>
+  function myFunction() {
+    document.getElementById("result").innerHTML = 7;
+  }
+ </script>
 </body>
 </html>
